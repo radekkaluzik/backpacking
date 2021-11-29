@@ -19,3 +19,15 @@ npm run start
 ```
 
 Your server should be running in http://127.0.0.1:3000
+
+### API docs
+
+GET `/categories` - returns a list of available equipment categories eg.
+
+```
+[
+"food",
+"clothes",
+"medication"
+]
+```
