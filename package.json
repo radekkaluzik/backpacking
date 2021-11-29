@@ -7,6 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mysql",
+    "restapi"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fhlavac/backpacking.git"
@@ -18,7 +24,9 @@
   },
   "homepage": "https://github.com/fhlavac/backpacking#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "eslint": "^8.3.0",
