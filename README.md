@@ -26,8 +26,8 @@ GET `/categories` - returns a list of available equipment categories eg.
 
 ```
 [
-"food",
-"clothes",
-"medication"
+    "food",
+    "clothes",
+    "medication"
 ]
 ```
