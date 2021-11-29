@@ -10,6 +10,8 @@ Install dependencies:
 npm i
 ```
 
+Rename `example.config.js` to `db.config.js` and pass database credentials.
+
 Run the server:
 
 ```
