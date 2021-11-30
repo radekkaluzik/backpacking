@@ -38,7 +38,7 @@ const Category = (category) => {
 // };
 
 Category.getAll = (name, result) => {
-  let query = 'SELECT name FROM category';
+  let query = 'SELECT * FROM category';
 
   if (name) {
     query += ` WHERE name LIKE '%${name}%'`;
@@ -51,11 +51,7 @@ Category.getAll = (name, result) => {
       return;
     }
 
-    console.log('categories: ', res);
-    result(
-      null,
-      res.map((item) => item.name)
-    );
+    result(null, res);
   });
 };
 

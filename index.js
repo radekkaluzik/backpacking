@@ -14,8 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const categories = require('./routes/categories');
+const gear = require('./routes/gear');
 
 // apply routes
 app.use('/categories', categories);
+app.use('/gear', gear);
 
 module.exports = app;
