@@ -13,6 +13,11 @@ const connection = mysql.createConnection({
 connection.connect((error) => {
   if (error) throw error;
   console.log('Successfully connected to the database.');
+
+  // TODO: prevent the connection from being lost
+  setInterval(() => {
+    connection.query('SELECT 1');
+  }, 5000);
 });
 
 module.exports = connection;

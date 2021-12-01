@@ -12,6 +12,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('public'));
 
 const categories = require('./routes/categories');
 const gear = require('./routes/gear');
