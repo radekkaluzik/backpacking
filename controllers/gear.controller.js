@@ -19,6 +19,17 @@ exports.findAll = (req, res) => {
 // Find a single gear with a id
 // exports.findOne = (req, res) => {};
 
+// Find gear by categoryId
+exports.findByCategoryId = (req, res) => {
+  Gear.findByCategoryId(req.params.categoryId, (err, data) => {
+    if (err) {
+      res.status(500).send({
+        message: err.message || 'Some error occurred while retrieving gear.',
+      });
+    } else res.send(data);
+  });
+};
+
 // Update a gear identified by the id in the request
 // exports.update = (req, res) => {};
 

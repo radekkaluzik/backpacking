@@ -37,6 +37,29 @@ const Gear = (gear) => {
 //   });
 // };
 
+Gear.findByCategoryId = (categoryId, result) => {
+  console.log(`SELECT * FROM gear WHERE categoryId = ${categoryId}`);
+  sql.query(
+    `SELECT * FROM gear WHERE categoryId = ${categoryId}`,
+    (err, res) => {
+      if (err) {
+        console.log('error: ', err);
+        result(err, null);
+        return;
+      }
+
+      if (res.length) {
+        console.log('found gear: ', res[0]);
+        result(null, res[0]);
+        return;
+      }
+
+      // not found gear with the category id
+      result({ kind: 'not_found' }, null);
+    }
+  );
+};
+
 Gear.getAll = (name, result) => {
   const queryGear = 'SELECT * FROM gear';
   const queryCategory = 'SELECT * FROM category';
