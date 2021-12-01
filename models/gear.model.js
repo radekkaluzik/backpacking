@@ -49,13 +49,13 @@ Gear.findByCategoryId = (categoryId, result) => {
       }
 
       if (res.length) {
-        console.log('found gear: ', res[0]);
-        result(null, res[0]);
+        console.log('found gear: ', res);
+        result(null, res);
         return;
       }
 
       // not found gear with the category id
-      result({ kind: 'not_found' }, null);
+      result(null, []);
     }
   );
 };
